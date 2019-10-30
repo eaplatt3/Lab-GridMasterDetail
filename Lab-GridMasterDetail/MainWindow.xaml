@@ -1,0 +1,20 @@
+﻿<Window x:Class="Lab_GridMasterDetail.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_GridMasterDetail"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <ListBox x:Name="MasterList" HorizontalAlignment="Left" Height="246" Margin="10,68,0,0" VerticalAlignment="Top" Width="151"/>
+        <Label Content="Rotten Tomatoes Score" HorizontalAlignment="Left" Margin="287,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="287,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="Movie" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top"/>
+        <Label Content="Review" HorizontalAlignment="Left" Margin="287,220,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="RottenTomatoesScoreDetails" HorizontalAlignment="Left" Height="23" Margin="442,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="320"/>
+        <TextBox x:Name="ReviewDetails" HorizontalAlignment="Left" Height="117" Margin="442,223,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="320"/>
+        <TextBox x:Name="NameDetails" HorizontalAlignment="Left" Height="23" Margin="442,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="320"/>
+
+    </Grid>
+</Window>
