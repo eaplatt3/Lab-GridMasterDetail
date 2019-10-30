@@ -9,7 +9,7 @@ namespace Lab_GridMasterDetail
     class Movie
     {
         string mName;
-        int mRottenTomatosScore;
+        string mRottenTomatosScore;
         string mReview;
 
         public string Name
@@ -25,7 +25,7 @@ namespace Lab_GridMasterDetail
             }
         }
 
-        public int RottenTomatosScore
+        public string RottenTomatosScore
         {
             get
             {

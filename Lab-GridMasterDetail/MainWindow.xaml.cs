@@ -42,6 +42,8 @@ namespace Lab_GridMasterDetail
                m = new Movie();
 
                 m.Name = read.ReadLine();
+                m.RottenTomatosScore = read.ReadLine();
+                m.Review = read.ReadLine();
 
                 MasterList.Items.Add(m.ToString());
             
