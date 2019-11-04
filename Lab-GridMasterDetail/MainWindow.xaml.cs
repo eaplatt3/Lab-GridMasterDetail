@@ -33,7 +33,9 @@ namespace Lab_GridMasterDetail
         {
             fileName = "TestData.txt";
 
-            Movie m; 
+            Movie m;
+
+            Actor a;
 
             StreamReader read = new StreamReader(fileName);
 
@@ -44,8 +46,19 @@ namespace Lab_GridMasterDetail
                 m.Name = read.ReadLine();
                 m.RottenTomatosScore = read.ReadLine();
                 m.Review = read.ReadLine();
+                m.Poster = read.ReadLine();
 
-                MasterList.Items.Add(m.ToString());
+                for(int i = 0; i<2; i++)
+                {
+                    a = new Actor();
+                    a.FirstName = read.ReadLine();
+                    a.LastName = read.ReadLine();
+                    m.Actors(a);
+
+
+                }
+
+                MasterList.Items.Add(m);
             
             }
         }
@@ -61,6 +74,20 @@ namespace Lab_GridMasterDetail
             NameDetails.Text = m.Name;
             RottenTomatoesScoreDetails.Text = m.RottenTomatosScore;
             ReviewDetails.Text = m.Review;
+
+            string fullPathFileName = Environment.CurrentDirectory + "\\" + m.Poster;
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(fullPathFileName);
+            bitmap.EndInit();
+            ImagePoster.Source = bitmap;
+
+            ListViewItem.Items.Clear();
+            foreach(Actor a in m.Actors)
+            {
+                ListViewItem.Items.Add(a);
+            }
+
         }
     }
 }

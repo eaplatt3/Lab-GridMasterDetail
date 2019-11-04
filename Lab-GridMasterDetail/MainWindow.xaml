@@ -8,13 +8,22 @@
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <ListBox x:Name="MasterList" HorizontalAlignment="Left" Height="246" Margin="10,68,0,0" VerticalAlignment="Top" Width="151" SelectionChanged="MasterList_SelectionChanged"/>
-        <Label Content="Rotten Tomatoes Score" HorizontalAlignment="Left" Margin="287,152,0,0" VerticalAlignment="Top"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="287,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="Rotten Tomatoes Score" HorizontalAlignment="Left" Margin="413,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="496,81,0,0" VerticalAlignment="Top"/>
         <Label Content="Movie" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top"/>
-        <Label Content="Review" HorizontalAlignment="Left" Margin="287,220,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="RottenTomatoesScoreDetails" HorizontalAlignment="Left" Height="23" Margin="442,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="320"/>
-        <TextBox x:Name="ReviewDetails" HorizontalAlignment="Left" Height="117" Margin="442,223,0,0" TextWrapping="Wrap" Text="{Binding SelectedValue.Review, ElementName=MasterList}" VerticalAlignment="Top" Width="320"/>
-        <TextBox x:Name="NameDetails" HorizontalAlignment="Left" Height="23" Margin="442,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="320"/>
+        <Label Content="Review" HorizontalAlignment="Left" Margin="166,262,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="RottenTomatoesScoreDetails" HorizontalAlignment="Left" Height="23" Margin="552,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <TextBox x:Name="ReviewDetails" HorizontalAlignment="Left" Height="117" Margin="218,262,0,0" TextWrapping="Wrap" Text="{Binding SelectedValue.Review, ElementName=MasterList}" VerticalAlignment="Top" Width="241"/>
+        <TextBox x:Name="NameDetails" HorizontalAlignment="Left" Height="23" Margin="552,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210"/>
+        <Image x:Name="ImagePoster" HorizontalAlignment="Left" Height="175" Margin="204,68,0,0" VerticalAlignment="Top" Width="139"/>
+        <ListView x:Name="ActorList" HorizontalAlignment="Left" Height="100" Margin="552,209,0,0" VerticalAlignment="Top" Width="220">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Actor" HorizontalAlignment="Left" Margin="499,209,0,0" VerticalAlignment="Top" IsEnabled="False" RenderTransformOrigin="0.491,-0.107"/>
 
     </Grid>
 </Window>

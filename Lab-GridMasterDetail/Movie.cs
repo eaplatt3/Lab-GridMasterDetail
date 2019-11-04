@@ -11,7 +11,8 @@ namespace Lab_GridMasterDetail
         string mName;
         string mRottenTomatosScore;
         string mReview;
-
+        string mPoster;
+        public List<Actor> Actors { get; set; }
         public string Name
         {
             get
@@ -51,9 +52,22 @@ namespace Lab_GridMasterDetail
             }
         }
 
+        public string Poster
+        {
+            get
+            {
+                return mPoster;
+            }
+            set
+            {
+                mPoster = value;
+            }
+        }
+
+
         public Movie()
         {
-
+            Actor a = new Actor(); 
         }
 
 
