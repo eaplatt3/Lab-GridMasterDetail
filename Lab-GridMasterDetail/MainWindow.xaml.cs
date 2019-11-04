@@ -49,5 +49,18 @@ namespace Lab_GridMasterDetail
             
             }
         }
+
+        private void MasterList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Movie m = (Movie) e.AddedItems[0];
+            ShowMovieDetails(m);
+        }
+
+        private void ShowMovieDetails(Movie m)
+        {
+            NameDetails.Text = m.Name;
+            RottenTomatoesScoreDetails.Text = m.RottenTomatosScore;
+            ReviewDetails.Text = m.Review;
+        }
     }
 }
